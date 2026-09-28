@@ -975,6 +975,12 @@
             });
           }
 
+          fetch("https://formspree.io/f/xkjgknwa", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email: emailVal, character: characterType.value })
+          });
+
           // 展示提交成功反馈
           setTimeout(() => {
             if (emailSuccess) emailSuccess.style.display = 'block';
